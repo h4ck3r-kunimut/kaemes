@@ -19,10 +19,51 @@
         background: #FF69B4;
       }
 
+      #wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+      }
+
       .name{
         font-size: 1.1rem;
         font-weight: 600;
+        /* Tambahkan margin atas untuk pemisah visual dari angka */
+        margin-top: 5px;
       }
+
+      /* Style untuk angka (Tambahan) */
+      .age {
+        font-size: 3rem; /* Ukuran besar untuk angka */
+        font-weight: bold;
+        color: #8b6a60; /* Warna yang sama dengan teks lainnya */
+        margin: 0;
+        padding: 0;
+        line-height: 1; /* Pastikan tidak ada spasi berlebihan */
+      }      
+      
+      .container {
+          text-align: center;
+          max-width: 70%;
+          opacity: .5;
+          margin: 0 auto;
+          padding: 0;
+      }
+      .text-1 {
+        margin-bottom: 20px;
+        font-size: 25;
+        align-items: center;
+        text-align: center;
+      }
+      .audio {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+
 
       #cake {
         display: block;
@@ -120,13 +161,18 @@
         font-weight: 300;
         font-style:italic;
         text-align: center;
-        h1 {
-          font-size: 1.4em;
-        }
+      }
+
+      /* Hapus style h1 di dalam .text karena kita akan menggunakan h1 untuk angka */
+      .text h1 {
+        /* Hapus atau ganti dengan .age style di atas */
+        font-size: 1.4em; /* Ganti dengan .age style */
       }
     </style>
   </head>
   <body>
+  <div id="wrapper">
+      <div id="cake-wrap" style="position:relative; display:inline-block;">
       <div class="cake">
         <div class="fuego"></div>
         <div class="fuego"></div>
@@ -154,7 +200,8 @@
         L100-178.521z">
             <animate id="relleno_2" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 0.58 1" begin="bizcocho_2.end" dur="0.5s" fill="freeze" values="
                               M100-178.521c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
-        c0,19.144,0,57.431,0,76.574c0,10.152,0,40.607,0,40.607c0,1.858-1.506,3.364-3.364,3.364l0,0c-1.858,0-3.364-1.506-3.364-3.364c0,0,0-30.455,0-40.607c0-19.144,0-57.432,0-76.575c0-11.057,0-44.226,0-44.226C96.636-177.015,98.142-178.521,100-178.521
+        c0,19.144,0,57.431,0,76.574c0,10.152,0,40.607,0,40.607c0,1.858-1.506,3.364-3.364,3.364l0,0c-1.858,0-3.364-1.506-3.364-3.364
+        c0,0,0-30.455,0-40.607c0-19.144,0-57.432,0-76.575c0-11.057,0-44.226,0-44.226C96.636-177.015,98.142-178.521,100-178.521
         L100-178.521z
                               ;
                               M100,267.257c1.858,0,3.364,1.506,3.364,3.363c0,0,0,33.17,0,44.227
@@ -282,18 +329,22 @@
         </path>
         <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
       </svg>
+      </div><!-- end cake-wrap -->
       <div class="text">
-      <h1>🎂🎉Barakallah fii umrik Kunii🎂🎉</h1>
-      <p class="name">Кунимут</p>
-      <p class="text">
-      <h3>я тебя люблю</h3>
+      <h1 class="age">17</h1>
+      <h1>🎂🎉Barakallah Fii Umrik Kuniimutt🎉🎂</h1>
+      <p class="name">Куни</p>
       </div>
-   <audio id="myAudio" loop>
+       <div class="container">
+        <p class="text-1">
+            Semoga sehat selalu, lancar rezekinya, berkah barokah donya lan akhirat
+        </p>
+      <audio controls loop>
   <source src="https://files.catbox.moe/zrsenl.mp3" type="audio/mpeg">
-</audio>
+     </div>
+     <p>👆🏼Di klik yaa lagunya hhee</p>
+      </audio>
 
-        
+  </div><!-- end wrapper -->
   </body>
 </html>
-
-
